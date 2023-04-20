@@ -1,0 +1,209 @@
+* {
+  font-family: cursive
+}
+
+body {
+  background: url(military.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  width: 70%;
+  padding: 30px;
+}
+
+label {
+  display: block;
+  color: darkcyan;
+  font-size: 18px;
+}
+
+input[type="date"] {
+  font-size: 15px;
+  padding: 5px;
+  border: 3px;
+  border-style: solid;
+  border-color: darkcyan;
+  border-radius: 0.5rem;
+}
+
+::-webkit-calendar-picker-indicator {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+select[id="month"] {
+  font-size: 15px;
+  padding: 6px;
+  border: 3px;
+  border-style: solid;
+  border-color: darkcyan;
+  border-radius: 0.5rem;
+}
+
+button{
+  font-size: 15px;
+  padding: 6px;
+  border: 3px;
+  border-style: solid;
+  border-color: darkcyan;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: darkcyan;
+  color: aliceblue;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#percentage {
+  color: aliceblue;
+  position: absolute;
+  top: 15%;
+}
+
+#output {
+  color: aliceblue;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;  
+  opacity: 0;
+}
+
+#text {
+  color: aliceblue;
+  position: absolute;
+  padding-left: 5px;
+  bottom: 14%;
+  font-size: 25px;
+  opacity: 0;
+}
+
+#quote {
+  color: aliceblue;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+#output.fade {
+  transition: opacity 1s ease-in;
+}
+
+#text.fade {
+  transition: opacity 1s ease-in;
+}
+
+#quote.fade {
+  transition: opacity 1s ease-in;
+}
+
+.inner {
+  stroke-width: 5;
+  stroke: lightgrey;
+  fill: none;
+}
+
+.outer {
+  stroke-width: 8;
+  stroke-linecap: round;
+  fill: none;
+  transform: rotate(270deg);
+  transform-origin: center;
+  transition-duration: 2.5s;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: 10s frames infinite ease-in-out;
+}
+
+@keyframes frames {
+  0% { stroke: lime; }
+  50% { stroke:	darkcyan; }
+  100% { stroke: lime; }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  color: aliceblue;
+  text-align: left;
+}
+
+.share-btn {
+  background: aliceblue;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.share-btn a i {
+  font-size: 32px;
+}
+
+.share-btn a {
+  margin: 12px 0;
+  transition: 500ms;
+}
+
+.share-btn a:hover {
+  transform: scale(1.2);
+}
+
+.share-btn .fa-facebook {
+  color: #3b5998;
+}
+
+.share-btn .fa-twitter {
+  color: #1da1f2;
+}
+
+.share-btn .fa-whatsapp {
+  color: #25d366;
+}
+
+.share-btn .fa-telegram {
+  color: #0088CC;
+}
+
+@media (max-width: 550px) {
+  .content {
+    padding: 8px 32px;
+  }
+
+  .share-btn {
+    transform: unset;
+    top: unset;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-direction: row;
+    padding: 16px 0;
+    justify-content: center;
+  }
+
+  .share-btn a {
+    margin: 0 32px;
+  }
+}

@@ -65,8 +65,6 @@ function calculateDays()
             counter += 0.1;
          }
       }, );
-      
-      document.getElementById("percentage").innerHTML = 100 + "% done";
       document.getElementById("output").innerHTML = "0";
       document.getElementById("text").innerHTML = "DAY TO ORD"
       document.getElementById("quote").innerHTML = "WHERE GOT TIME? OWADIO!";
@@ -91,16 +89,15 @@ function calculateDays()
    }
    else {
       setInterval(() => {
-         if(counter > daysPercentage) {
+         if(counterFloat > daysPercentage) {
             clearInterval();
          }
-         else {   
-            counterFloat = Math.round((counter) * 10) / 10;
-            counter += 0.1;
+         else { 
             document.getElementById("percentage").innerHTML = counterFloat + "% done" ;
+            counter += 0.1;  
+            counterFloat = Math.round((counter) * 10) / 10;
          }
       }, );
-      console.log(daysPercentage);
       document.getElementById("output").innerHTML = days;
       if (days == 1) {
          document.getElementById("text").innerHTML = "DAY TO ORD"
@@ -150,7 +147,7 @@ function calculateDays()
 "Hurry up send arms! Where my armskote helper?",
 "No excuse for you, don't tell me your sad story, you want you go talk to jesus",
 "Where is my COS? Area cleaning done?",
-"EHH RECROOT! FINGER OFF THE TRIGGER!",
+"Anything... but Infantry",
 "Sergeant major, We have cleared away the GS table as requested by you. Can go canteen now?",
 "Don't make your problem my problem",
 "I love dinner, especially the ones on Friday"

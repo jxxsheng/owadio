@@ -12,19 +12,19 @@ function share() {
   let postTitle;
 
   if (days <= 0){
-    postTitle = encodeURI("WHERE GOT TIME? OWADIO!\n\nCount your days now: \n");
+    postTitle = encodeURI(" WHERE GOT TIME? OWADIO!\n Count your days now!\n");
   }
   else if (days == 1){
-    postTitle = encodeURI("1 MORE DAY TO ORD!\n\nCount your days now: \n")
+    postTitle = encodeURI(" 1 MORE DAY TO ORD!\n Count your days now!\n")
   }
   else if ((days - a) > 1){
-    postTitle = encodeURI((days - a) + " more days to Enlistment!\n\nCount your days now: \n");
+    postTitle = encodeURI(" " + (days - a) + " more days to Enlistment!\n Count your days now!\n");
   }
   else if ((days - a) == 1){
-    postTitle = encodeURI((days - a) + " more day to Enlistment!\n\nCount your days now: \n");
+    postTitle = encodeURI(" " + (days - a) + " more day to Enlistment!\n Count your days now!\n");
   }
   else {
-    postTitle = encodeURI(days + " Days to ORD!\n\nCount your days now: \n");
+    postTitle = encodeURI(" " + days + " Days to ORD!\n Count your days now!\n");
   }
 
   facebook.setAttribute(
@@ -44,7 +44,7 @@ function share() {
 
   telegram.setAttribute(
     "href",
-    `https://t.me/share/url?url=${postUrl}&text=${postTitle}`
+    `https://t.me/share/url?text=${postTitle}&url=${postUrl}`
   );
 }
 share();

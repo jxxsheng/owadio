@@ -1,2 +1,2 @@
 # owadio
-The perfect site for NSF and Pre-Enlistees to countdown the number of days to ORD and Enlistment.
+A simple website for Full-time National Servicemen (NSFs) and Pre-Enlistees to count the number of days to ORD and Enlistment.

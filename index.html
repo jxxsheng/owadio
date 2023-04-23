@@ -5,56 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="owadio, ord, nsf, enlistment, ordcounter">
-    <meta name="description" content="The perfect site for NSF and Pre-Enlistees to countdown the number of days to ORD and Enlistment.">
+    <meta name="description" content="A simple website for Full-time National Servicemen (NSFs) and Pre-Enlistees to count the number of days to ORD and Enlistment.">
+    <meta property="og:title" content="OWADIO">
+    <meta property="og:description" content="Count your days to ORD now!">
+    <meta property="og:image" content="https://i.ibb.co/PtGc3b0/owadio.png">
     <title>owadio</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
-
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+    </style>
 </head>
 <body>
-    <div class="container">
-      <label for="enlistment"><b>Enlistment Date</b></label>
-        <input type="date" min="2020-01-01" max="2030-01-01" id="enlistment">
-          <select id="month">
-            <option value="22">22-month ns</option>
-            <option value="24">24-month ns</option>
-          </select>
-        <button onclick="calculateDays()">Calculate</button>
-      <script src="script.js"></script>
-    </div>
 
-    <div class="progress">
-      <svg width="300" height="300">
-        <circle r="130" cx="150" cy="150" class="inner"></circle>
-        <circle r="130" cx="150" cy="150" class="outer"></circle>   
-      </svg>
-        <p id="percentage"></p>
-        <p id="output"></p>
-        <p id="text"></p>
-    </div>
+  <div class="container">
+    <label for="enlistment">Enlistment Date</label>
+      <input type="date" min="2020-01-01" max="2030-01-01" id="enlistment">
+        <select id="month">
+          <option value="22">22-month ns</option>
+          <option value="24">24-month ns</option>
+        </select>
+    <button onclick="calculateDays()">Calculate</button>
+    <script src="script.js"></script>
+  </div>
 
-    <p id="quote"></p>
+  <div class="progress">
+    <svg width="300" height="300">
+      <circle r="130" cx="150" cy="150" class="inner"></circle>
+      <circle r="130" cx="150" cy="150" class="outer"></circle>   
+    </svg>
+      <p id="percentage"></p>
+      <p id="output"></p>
+      <p id="text"></p>
+  </div>
 
-    <div class="share-btn">    
-      <a target="_blank" class="facebook-btn">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a target="_blank" class="twitter-btn">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a target="_blank" class="whatsapp-btn">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a target="_blank" class="telegram-btn">
-        <i class="fab fa-telegram"></i>
-      </a>
-    </div>
+  <p id="quote"></p>
+
+  <div class="share-btn">    
+    <a target="_blank" class="facebook-btn">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a target="_blank" class="twitter-btn">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a target="_blank" class="whatsapp-btn">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a target="_blank" class="telegram-btn">
+      <i class="fab fa-telegram"></i>
+    </a>
     <script src="share.js"></script>
+  </div>
 
-    <div class="footer">
-      <p>Image by <a target="_blank" href="https://www.freepik.com/free-vector/war-hand-drawn-soldier-background_27518506.htm#query=military&position=9&from_view=search&track=sph">Freepik</a> &copy 2023 jxxsheng</p>
-    </div>
-    
+  <div class="footer">
+    <p>Image by <a target="_blank" href="https://www.freepik.com/free-vector/war-hand-drawn-soldier-background_27518506.htm#query=military&position=9&from_view=search&track=sph">Freepik</a> &copy 2023 jxxsheng</p>
+  </div>
+
 </body>
 </html>

@@ -122,6 +122,8 @@ button:hover {
   stroke-width: 6;
   stroke: lightgrey;
   fill: none;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 
 .outer {

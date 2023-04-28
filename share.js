@@ -5,25 +5,25 @@ const telegram = document.querySelector(".telegram-btn");
 
 function share() {
 
-  let days = globalVar1;
-  let a = globalVar2;
+  let daysLeft = globalVar1;
+  let days = globalVar2;
   let postUrl = encodeURI(document.location.href);
   let postTitle;
 
-  if (days <= 0){
+  if (daysLeft <= 0){
     postTitle = encodeURI("WHERE GOT TIME? OWADIO!\n");
   }
-  else if (days == 1){
+  else if (daysLeft == 1){
     postTitle = encodeURI("1 MORE DAY TO ORD!\n")
   }
-  else if ((days - a) > 1){
-    postTitle = encodeURI((days - a) + " more days to Enlistment!\n");
+  else if ((daysLeft - days) > 1){
+    postTitle = encodeURI((daysLeft - days) + " more days to Enlistment!\n");
   }
-  else if ((days - a) == 1){
-    postTitle = encodeURI((days - a) + " more day to Enlistment!\n");
+  else if ((daysLeft - days) == 1){
+    postTitle = encodeURI((daysLeft - days) + " more day to Enlistment!\n");
   }
   else {
-    postTitle = encodeURI(days + " days to ORD!\n");
+    postTitle = encodeURI(daysLeft + " days to ORD!\n");
   }
 
   let postTwitter = postTitle.replace("%0A"," ");

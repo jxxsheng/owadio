@@ -5,8 +5,8 @@ function calculateDays()
    let month = document.getElementById("month").value;
    let enlistmentDay = document.getElementById("enlistment").value;
    let ordDay = new Date(enlistmentDay);
-   ordDay.setDate(ordDay.getDate() - 1);
    const ordDate = new Date(ordDay.setMonth(ordDay.getMonth() + parseInt(month)));
+   ordDate.setDate(ordDate.getDate() - 1);
    ordDate.setHours(0,0,0,0);
    const enlistmentDate = new Date(enlistmentDay);
    enlistmentDate.setHours(0,0,0,0);

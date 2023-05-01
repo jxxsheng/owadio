@@ -5,8 +5,9 @@ function calculateDays()
    let month = document.getElementById("month").value;
    let enlistmentDay = document.getElementById("enlistment").value;
    let ordDay = new Date(enlistmentDay);
-   ordDay.setDate(ordDay.getDate()-1);
+   ordDay.setDate(ordDay.getDate() - 1);
    const ordDate = new Date(ordDay.setMonth(ordDay.getMonth() + parseInt(month)));
+   ordDate.setHours(0,0,0,0);
    const enlistmentDate = new Date(enlistmentDay);
    enlistmentDate.setHours(0,0,0,0);
    if (enlistmentDate == "Invalid Date") {
@@ -14,8 +15,8 @@ function calculateDays()
       return;
    }
    const today = new Date();
-   const days = Math.floor((ordDate - enlistmentDate)/(1000*60*60*24));
-   const daysLeft = Math.floor((ordDate - today)/(1000*60*60*24));
+   const days = Math.ceil((ordDate - enlistmentDate)/(1000*60*60*24));
+   const daysLeft = Math.ceil((ordDate - today)/(1000*60*60*24));
    let daysPercentage = Math.round((100-(daysLeft/(days/100))) * 10) / 10;
    let counter = 0;
    let counterFloat = 0;
